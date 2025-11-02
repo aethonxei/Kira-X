@@ -24,7 +24,7 @@ Sub-Bots (JadiBot)
 Additional Extensions
 
 <details>
- <summary><b>FUNCTIONS 🍎</b></summary>
+ <summary><b>FUNCTIONS 🏮</b></summary>
 
 > Bot in development if it presents any failure report to the creator to give an optimal solution.
 
