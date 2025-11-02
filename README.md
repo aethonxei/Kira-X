@@ -79,7 +79,7 @@ npm start
 <details>
   <summary><b>🜸 Commands to keep the Bot active longer</b></summary>
 
-> *Run these commands inside the Jas-X folder*
+> *Run these commands inside the Kira-X folder*
 ```bash
 termux-wake-lock && npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs 
 ``` 
@@ -104,24 +104,24 @@ pm2 start index
 ### In case of stopping
 > _If after you have installed the bot and Termux jumps blank, your internet went out or you restarted your cell phone, you will only follow these steps:_
 ```bash
-cd && cd Jas-X && npm start
+cd && cd Kira-X && npm start
 ```
 ----
 ### Get new code QR 
-> *Stop the bot, click on the symbol (ctrl) [default=z] use the letter "z" + "ENTER" until something green appears similar to: `Jas-X $`*
+> *Stop the bot, click on the symbol (ctrl) [default=z] use the letter "z" + "ENTER" until something green appears similar to: `Kira-X $`*
 > **Write the following commands one by one :**
 ```bash 
-cd && cd Jas-X && rm -rf sessions/Principal && npm run qr
+cd && cd Kira-X && rm -rf sessions/Principal && npm run qr
 ```
 ----
 ### Get new phone code 
 ```bash 
-cd && cd Jas-X && rm -rf sessions/Principal && npm run code
+cd && cd Kira-X && rm -rf sessions/Principal && npm run code
 ```
 </details>
 
 <details>
-<summary><b>❀ Update Jas-MD</b></summary>
+<summary><b>❀ Update Kira-MD</b></summary>
 
 > **Use this option only if you want to update to the latest version of Jas-X. We've implemented a clever command-based method for performing the update, but keep in mind that using it will delete all files from the current version and replace them with the new version.. Only the database will be kept, so the Bot will need to be relinked.**  
 
@@ -135,7 +135,7 @@ grep -q 'bash\|wget' <(dpkg -l) || apt install -y bash wget && wget -O - https:/
 *If after installing the bot and logging in (you want to put your number in the owner list) put this command:*
 
 ```bash
-cd && cd Jas-X && nano settings.js
+cd && cd Kira-X && nano settings.js
 ```
 #### So that you don't lose your progress in Jas-X, these commands will make a backup of your `database.json` and add it to the most recent version.
 > *These commands only work for TERMUX, REPLIT, LINUX*.                > 💡 You can use [Termux Widget](https://f-droid.org/packages/com.termux.widget/) to launch the bot faster from the home screen.
@@ -147,7 +147,7 @@ cd && cd Jas-X && nano settings.js
   <summary><b>🚀 SEE STEPS FOR CLOUD SHELL</b></summary>
 
 ```bash
-git clone https://github.com/aethon xei/Jas-X && cd Jas-X
+git clone https://github.com/aethon xei/Kira-X && cd Kira-X
 ```
 
 ```bash
