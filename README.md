@@ -111,12 +111,12 @@ cd && cd Kira-X && npm start
 > *Stop the bot, click on the symbol (ctrl) [default=z] use the letter "z" + "ENTER" until something green appears similar to: `Kira-X $`*
 > **Write the following commands one by one :**
 ```bash 
-cd && cd Kira-X && rm -rf sessions/Principal && npm run qr
+cd && cd Kira-X && rm -rf KiraSessions && npm run qr
 ```
 ----
 ### Get new phone code 
 ```bash 
-cd && cd Kira-X && rm -rf sessions/Principal && npm run code
+cd && cd Kira-X && rm -rf KiraSessions && npm run code
 ```
 </details>
 
