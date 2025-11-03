@@ -301,7 +301,7 @@ if (!['grupo-unbanchat.js'].includes(name) && chat && chat.isBanned && !isROwner
 if (name != 'grupo-unbanchat.js' && name != 'owner-exec.js' && name != 'owner-exec2.js' && name != 'grupo-delete.js' && chat?.isBanned && !isROwner) return
 if (user.antispam > 2) return
 if (m.text && user.banned && !isROwner) {
-m.reply(`《✦》Estas baneado/a, no puedes usar comandos en este bot!\n\n${user.bannedReason ? `✰ *Motivo:* ${user.bannedReason}` : '✰ *Motivo:* Sin Especificar'}\n\n> ✧ Si este Bot es cuenta oficial y tiene evidencia que respalde que este mensaje es un error, puedes exponer tu caso con un moderador.`)
+m.reply(`《✦》You are banned, you cannot use commands on this bot!\n\n${user.bannedReason ? `✰ *Reason:* ${user.bannedReason}` : '✰ *Reason:* Unspecified'}\n\n> ✧ If this bot is an official account and has evidence to support that this message is an error, you can report your case to a moderator..`)
 user.antispam++
 return
 }
@@ -361,11 +361,11 @@ let xp = 'exp' in plugin ? parseInt(plugin.exp) : 17
 if (xp > 200) m.reply('chirrido -_-')
 else m.exp += xp
 if (!isPrems && plugin.coin && global.db.data.users[sender].coin < plugin.coin * 1) {
-this.reply(m.chat, `❮✦❯ Se agotaron tus ${m.moneda}`, m)
+this.reply(m.chat, `❮✦❯ Yours are gone ${m.moneda}`, m)
 continue
 }
 if (plugin.level > _user.level) {
-this.reply(m.chat, `❮✦❯ Se requiere el nivel: *${plugin.level}*\n\n• Tu nivel actual es: *${_user.level}*\n\n• Usa este comando para subir de nivel:\n*${usedPrefix}levelup*`, m)
+this.reply(m.chat, `❮✦❯ The required level: *${plugin.level}*\n\n• Your current level is: *${_user.level}*\n\n• Use this command to level up:\n*${usedPrefix}levelup*`, m)
 continue
 }
 let extra = {
@@ -380,7 +380,7 @@ console.error(e)
 if (e) {
 let text = format(e)
 for (let key of Object.values(global.APIKeys))
-text = text.replace(new RegExp(key, 'g'), 'Administrador')
+text = text.replace(new RegExp(key, 'g'), 'Administrator')
 m.reply(text)
 }
 } finally {
@@ -389,7 +389,7 @@ try {
 await plugin.after.call(this, m, extra)
 } catch (e) { console.error(e) }
 }
-if (m.coin) this.reply(m.chat, `❮✦❯ Utilizaste ${+m.coin} ${m.moneda}`, m)
+if (m.coin) this.reply(m.chat, `❮✦❯ You used ${+m.coin} ${m.moneda}`, m)
 }
 break
 }
@@ -443,7 +443,7 @@ global.dfail = (type, m, conn) => { failureHandler(type, conn, m); };
 const file = global.__filename(import.meta.url, true);
 watchFile(file, async () => {
 unwatchFile(file);
-console.log(chalk.green('Actualizando "handler.js"'));
+console.log(chalk.green('Updating "handler.js"'));
 if (global.conns && global.conns.length > 0 ) {
 const users = [...new Set([...global.conns.filter((conn) => conn.user && conn.ws.socket && conn.ws.socket.readyState !== ws.CLOSED).map((conn) => conn)])];
 for (const userr of users) { userr.subreloadHandler(false) }
