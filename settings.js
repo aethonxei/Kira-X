@@ -9,42 +9,35 @@ import moment from 'moment-timezone'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-//BETA: Si quiere evitar escribir el número que será bot en la consola, agregué desde aquí entonces:
-//Sólo aplica para opción 2 (ser bot con código de texto de 8 digitos)
-global.botNumber = '' //Ejemplo: 573218138672
+//BETA: If you wish to avoid typing the number that will be in the console, add the following:
+
+// The only application for option 2 (contains a robot with an 8-digit text)
+global.botNumber = '' //Example: 212605158422
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 global.owner = [
-// <-- Número @s.whatsapp.net -->
-  ['18294868853', '⏤͟͞ू⃪ ፝͜⁞𝘿𝙞𝙤𝙣𝙚𝙞𝙗𝙞-ʳⁱᵖ ִֶ ࣪˖ ִֶָ𖠌་༘', true],
-  ['18096758983', '⟆⃝༉⃟⸙ ᯽ A͎e͎t͎h͎o͎n͎ X͎e͎i͎ ⌗⚙️࿐', true],
-  ['212605158422', 'Aethon', true],
-  ['5216671548329', 'ू⃪ ꒰˘͈ᵕ ˘͈ 𝑳𝒆𝒈𝒏𝒂-𝒄𝒉𝒂𝒏 🪽 ꒱𖦹', true],
-  ['573114910796', 'Arlette 🎀', true],
+// <-- @s.whatsapp.net - Number -->
+  ['212605158422', '⏤͟͞ू⃪ ፝͜⁞𝙖𝙚𝙩𝙝𝙤𝙣𝙭𝙚𝙞 ⌗⚙️࿐-ˢᵃˡⁱᵐ ִֶ ࣪˖ ִֶָ𖠌་༘', true],
 
-// <-- Número @lid -->
-  ['200141197844495', 'Dioneibi', true],
-  ['236391074132098', 'NEOTOKIO', true],
-  ['260081845334105', 'nevi', true],
-  ['58566677377081', 'legna', true],
-  ['177266856313074', 'speed3xz', true]
+// <-- @lid - Number -->
+  ['200141197844495', 'Salim', true],
 ];
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 global.mods = []
-global.suittag = ['18294868853']
+global.suittag = ['212605158422']
 global.prems = []
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 global.libreria = 'Baileys'
 global.baileys = 'V 6.7.16' 
-global.languaje = 'Español'
+global.languaje = 'English'
 global.vs = '2.2.0'
-global.nameqr = 'Ruby-Hoshino-Bot-MD'
-global.namebot = '꒰ 🥥 ꒱ؘ 𝙍𝙪𝙗𝙮-𝙃𝙤𝙨𝙝𝙞𝙣𝙤-𝘽𝙤𝙩 ♪ ࿐ ࿔*:･ﾟ'
+global.nameqr = 'Kira-X'
+global.namebot = '꒰ 🍎 ꒱ؘ 𝙆𝙞𝙧𝙖-𝙓 ❄︎ ࿐ ࿔*:･ﾟ'
 global.Rubysessions = 'KiraSessions'
 global.jadi = 'KiraJadiBots' 
 global.RubyJadibts = true
