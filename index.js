@@ -518,16 +518,27 @@ if (stopped === 'close' || !conn || !conn.user) return
 console.log(await purgeOldFiles());
 console.log(chalk.bold.cyanBright(`\n╭» ❍ FILES ❍\n│→ RESIDUAL FILES DELETED\n╰― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ⌫ ♻`))}, 1000 * 60 * 10)
 
-_quickTest().then(() => conn.logger.info(chalk.bold(`✦  M A D E\n`.trim()))).catch(console.errasync function isValidPhoneNumber(number) {
-try {
-number = number.replace(/\s+/g, '')
-if (number.startsWith('+521')) {
-number = number.replace('+521', '+52');
-} else if (number.startsWith('+52') && number[4] === '1') {
-number = number.replace('+52 1', '+52');
+_quickTest().then(() => conn.logger.info(chalk.bold(`✦  M A D E\n`.trim()))).catch(console.error)
+
+async function isValidPhoneNumber(number) {
+  try {
+    // 1. Remove all spaces
+    number = number.replace(/\s+/g, '')
+
+    // 2. If number starts with '0', replace it with '+212'
+    if (number.startsWith('0')) {
+      number = number.replace(/^0/, '+212');
+    }
+
+    // 3. If it starts with '00212', convert it to '+212' (some people type 00 instead of +)
+    if (number.startsWith('00212')) {
+      number = number.replace(/^00212/, '+212');
+    }
+
+    // 4. Parse and validate using libphonenumber
+    const parsedNumber = phoneUtil.parseAndKeepRawInput(number);
+    return phoneUtil.isValidNumber(parsedNumber);
+  } catch (error) {
+    return false;
+  }
 }
-const parsedNumber = phoneUtil.parseAndKeepRawInput(number)
-return phoneUtil.isValidNumber(parsedNumber)
-} catch (error) {
-return false
-}}
