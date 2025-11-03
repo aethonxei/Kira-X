@@ -26,7 +26,7 @@ Additional Extensions
 <details>
  <summary><b>FUNCTIONS 🏮</b></summary>
 
-> Bot in development if it presents any failure report to the creator to give an optimal solution.
+> Bot is still in development if you face any error report it to the creator to fix it.
 
 - [x] Voice and text interaction
 - [x] Group settings
@@ -96,7 +96,7 @@ pm2 logs
 ```bash 
 pm2 stop index
 ``` 
-> *If you want to start Termux running again use:*
+> *If you want to start running Termux again use:*
 ```bash 
 pm2 start index
 ```
@@ -123,9 +123,9 @@ cd && cd Kira-X && rm -rf sessions/Principal && npm run code
 <details>
 <summary><b>❀ Update Kira-MD</b></summary>
 
-> **Use this option only if you want to update to the latest version of Jas-X. We've implemented a clever command-based method for performing the update, but keep in mind that using it will delete all files from the current version and replace them with the new version.. Only the database will be kept, so the Bot will need to be relinked.**  
+> **Use this option only if you want to update to the latest version of Kira-X. We've implemented a clever command-based method for performing the update, but keep in mind that using it will delete all files from the current version and replace them with the new version.. Only the database will be kept, so the Bot will need to be relinked.**  
 
-**Commands to update Jas-X automatically**
+**Commands to update Kira-X automatically**
 
 ```bash
 grep -q 'bash\|wget' <(dpkg -l) || apt install -y bash wget && wget -O - https://raw.githubusercontent.com/aethonxei/Jas-X/main/termux.sh | bash 
@@ -137,7 +137,7 @@ grep -q 'bash\|wget' <(dpkg -l) || apt install -y bash wget && wget -O - https:/
 ```bash
 cd && cd Kira-X && nano settings.js
 ```
-#### So that you don't lose your progress in Jas-X, these commands will make a backup of your `database.json` and add it to the most recent version.
+#### So that you don't lose your progress in Kira-X, these commands will make a backup of your `database.json` and add it to the most recent version.
 > *These commands only work for TERMUX, REPLIT, LINUX*.                > 💡 You can use [Termux Widget](https://f-droid.org/packages/com.termux.widget/) to launch the bot faster from the home screen.
 </details>                                                                 
 
@@ -171,9 +171,9 @@ npm start
 
 
 
-- **Support group:** [Here](https://chat.whatsapp.com/GQnLhRAfMD8KS3vtVZSonp?mode=wwt)
+- **Support Group:** [Here](https://chat.whatsapp.com/GQnLhRAfMD8KS3vtVZSonp?mode=wwt)
 - **Dev Contact:** [Here](https://wa.me/212605158422) 
-- **Updates Channel:** [Here](https://whatsapp.com/channel/0029VbBQ1kG8PgsPtLAabC23)
+- **Channel Updates:** [Here](https://whatsapp.com/channel/0029VbBQ1kG8PgsPtLAabC23)
 
 
 
