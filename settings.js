@@ -11,7 +11,7 @@ import moment from 'moment-timezone'
 
 //BETA: If you wish to avoid typing the number that will be in the console, add the following:
 
-// The only application for option 2 (contains a robot with an 8-digit text)
+// The only application for option 2 (contains a code with an 8-digit text)
 global.botNumber = '' //Example: 212605158422
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
