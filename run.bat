@@ -1,22 +1,22 @@
 @echo off
-echo [ INFORMACION ] Ruby-Hoshino-Bot-MD para Windows
+echo [INFORMATION] Kira-X for Windows
 
-REM Ejecutar el archivo setup.bat
-echo [Console @ Ruby_Hoshino] Verificando si los programas de ejecucion estan instalados...
+REM Run the setup.bat file
+echo [Console @ Kira_X] Checking if the runtime programs are installed...echo [Console @ Kira_X] Checking if the runtime programs are installed...
 call setup.bat
 
-REM Verificar si setup.bat terminó correctamente
+REM Verify if setup.bat finished successfully
 if %errorlevel% neq 0 (
-    echo [Console @ Ruby_Hoshino] setup.bat termino con errores, pero se continuara con la ejecución.
+    echo [Console @ Kira_X] setup.bat terminated with errors, but execution will continue.
 )
 
-REM Ejecutar node index.js
-echo [Console @ Ruby_Hoshino] Iniciando Ruby-Hoshino-Bot-MD...
+REM Run node index.js
+echo [Console @ Kira_X] Starting Kira-X...echo [Console @ Kira_X] Starting Kira-X...
 node index.js
 if %errorlevel% neq 0 (
-    echo [ERROR] Ocurrio un error. Verifica la instalacion.
+    echo [ERROR] An error occurred. Please verify the installation.
 )
 
-REM Pausa final para mantener la ventana abierta
-echo Presiona una tecla para cerrar esta ventana...
+REM Final pause to keep the window open
+echo Press any key to close this window...
 pause
