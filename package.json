@@ -1,5 +1,5 @@
 {
-"name": "ruby-hoshino-md",
+"name": "Kira-X",
 "version": "2.2.0",
 "description": "WhatsApp Bot Multi Device",
 "main": "index.js",
@@ -18,16 +18,16 @@
 "eslint": "eslint .",
 "eslintfix": "eslint --fix ."
 },
-"homepage": "https://github.com/Dioneibi-rip/Ruby-Hoshino-Bot",
+"homepage": "https://github.com/aethonxei/Kira-X",
 "author": {
-"name": "Dioneibi-rip"
+"name": "aethonxei"
 },
 "repository": {
 "type": "git",
-"url": "git+https://github.com/Dioneibi-rip/Ruby-Hoshino-Bot.git"
+"url": "git+https://github.com/aethonxei/Kira-X.git"
 },
 "bugs": {
-"url": "https://github.com/Dioneibi-rip/Ruby-Hoshino-Bot/issues"
+"url": "https://github.com/aethonxei/Kira-X/issues"
 },
 "license": "MIT-License",
 "dependencies": {
