@@ -35,7 +35,7 @@ let handler = async (m, { conn }) => {
     }
 }
 
-handler.help = ['nights/noches'];
+handler.help = ['nights/gn'];
 handler.tags = ['grupo'];
 handler.command = ['nights', 'gn', 'goodnight'];
 handler.group = true;
