@@ -7,12 +7,12 @@ let handler = async (m, { conn }) => {
     m.react('🌕');
     
     const messages = [
-        "¡Buenas noches! 🌜 Espero que tengas un descanso reparador y sueñes con cosas hermosas.",
-        "¡Buenas noches! 🌟 Que la tranquilidad de la noche te envuelva y te prepare para un nuevo día.",
-        "¡Buenas noches! 🌌 Recuerda que cada estrella en el cielo es un sueño esperando a hacerse realidad.",
-        "¡Buenas noches! 🌙 Deja atrás las preocupaciones de hoy y abraza la paz de la noche.",
-        "¡Buenas noches! 🌠 Espero que tus sueños sean tan brillantes como las estrellas que iluminan el cielo.",
-        "¡Buenas noches! 💤 Que encuentres serenidad en el silencio de la noche y te despiertes renovado."
+        "Good night! 🌜 I hope you have a restful sleep and dream beautiful things.",
+        "Good night! 🌟 May the tranquility of the night envelop you and prepare you for a new day.",
+        "Good night! 🌌 Remember that every star in the sky is a dream waiting to come true.",
+        "Good night! 🌙 Leave today's worries behind and embrace the peace of the night.",
+        "Good night! 🌠 I hope your dreams are as bright as the stars that light up the sky.",
+        "Good night! 💤 May you find serenity in the silence of the night and wake up refreshed.."
     ];
 
     let randomMessage = messages[Math.floor(Math.random() * messages.length)];
@@ -37,7 +37,7 @@ let handler = async (m, { conn }) => {
 
 handler.help = ['nights/noches'];
 handler.tags = ['grupo'];
-handler.command = ['nights', 'noche', 'noches'];
+handler.command = ['nights', 'gn', 'goodnight'];
 handler.group = true;
 
 export default handler;
