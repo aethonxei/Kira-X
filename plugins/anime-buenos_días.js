@@ -7,12 +7,12 @@ let handler = async (m, { conn }) => {
     m.react('☀️');
 
     const messages = [
-        "¡Buenos días! 🌞 Espero que tu día esté lleno de alegría y oportunidades brillantes.",
-        "¡Buenos días! 🔆 Que este nuevo día te traiga sonrisas y momentos inolvidables.",
-        "¡Buenos días! 🌤️ Espero que hoy encuentres belleza en cada pequeño detalle.",
-        "¡Buenos días! ✨ Que este día esté lleno de inspiración y que cada paso te acerque a tus sueños.",
-        "¡Buenos días! 🌅 Espero que hoy sea un día lleno de luz y amor.",
-        "¡Buenos días! 🌄 Que el día de hoy esté lleno de alegría y oportunidades para crecer."
+        "Good morning! 🌞 I hope your day is full of joy and bright opportunities.",
+        "Good morning! 🔆 May this new day bring you smiles and unforgettable moments.",
+        "Good morning! 🌤️ I hope you find beauty in every little detail today.",
+        "Good morning! ✨ May this day be full of inspiration and may every step bring you closer to your dreams.",
+        "Good morning! 🌅 I hope today is a day full of light and love.",
+        "Good morning! 🌄 May today be full of joy and opportunities to grow."
     ];
 
     let randomMessage = messages[Math.floor(Math.random() * messages.length)];
