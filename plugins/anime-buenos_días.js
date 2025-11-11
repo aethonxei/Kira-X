@@ -36,7 +36,7 @@ let handler = async (m, { conn }) => {
 
 handler.help = ['dias/days'];
 handler.tags = ['grupo'];
-handler.command = ['dias', 'dia', 'days'];
+handler.command = ['goodmorning', 'gm', 'days'];
 handler.group = true;
 
 export default handler;
