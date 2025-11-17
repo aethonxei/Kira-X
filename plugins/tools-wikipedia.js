@@ -1,0 +1,25 @@
+import axios from 'axios'
+import cheerio from 'cheerio'
+
+let handler = async (m, { text }) => {
+	if (!text) return conn.reply(m.chat, `${emoji} Enter what you want to search for on Wikipedia.`, m)
+	
+    try {
+	const link =  await axios.get(`https://en.wikipedia.org/wiki/${text}`)
+	const $ = cheerio.load(link.data)
+	let wik = $('#firstHeading').text().trim()
+	let resulw = $('#mw-content-text > div.mw-parser-output').find('p').text().trim()
+	m.reply(`▢ *Wikipedia*
+
+‣ Sought : ${wik}
+
+${resulw}`)
+} catch (e) {
+  m.reply(`${emoji2} No results were found.`)
+}
+}
+handler.help = ['wikipedia']
+handler.tags = ['tools']
+handler.command = ['wiki', 'wikipedia'] 
+
+export default handler
