@@ -1,0 +1,59 @@
+const baseCoinReward = 10000;
+
+var handler = async (m, { conn }) => {
+
+    let user = global.db.data.users[m.sender] || {};
+    user.christmas = user.christmas || 0;
+
+    const currentDate = new Date();
+    const currentYear = currentDate.getFullYear();
+    const isDecember = currentDate.getMonth() === 11; 
+
+    const cooldown = 365 * 24 * 60 * 60 * 1000; // 1 year in milliseconds
+    let timeRemaining = user.christmas + cooldown - currentDate.getTime();
+
+    if (!isDecember) {
+        return m.reply(`🎄 You can only claim your Christmas gift in December! Come back in December! ${currentYear}.`);
+    }
+
+    if (timeRemaining > 0) {
+        return m.reply(`${emoji3} You already claimed your Christmas gift this year! Come back in:\n *${msToTime(timeRemaining)}*`);
+    }
+
+    let coinReward = pickRandom([5, 10, 15, 20]);
+    let expReward = pickRandom([2000, 3000, 4000, 5000]);
+    let giftReward = pickRandom([2, 3, 4, 5]);
+
+    user.coin = (user.coin || 0) + coinReward;;
+    user.exp = (user.exp || 0) + expReward;
+    user.gifts = (user.gifts || 0) + giftReward;
+
+    m.reply(`
+\`\`\`🎄 Merry Christmas! Enjoy your Christmas gift! 🎁\`\`\`
+
+💸 *${m.moneda}* : +${coinReward}
+✨ *Experience* : +${expReward}
+🎁 *Christmas Gifts* : +${giftReward}`);
+
+    user.christmas = new Date().getTime();
+}
+
+handler.help = ['newyear', 'christmas'];
+handler.tags = ['rpg'];
+handler.command = ['newyear', 'christmas'];
+handler.group = true;
+handler.register = true;
+
+export default handler;
+
+function pickRandom(list) {
+    return list[Math.floor(Math.random() * list.length)];
+}
+
+function msToTime(duration) {
+    var days = Math.floor(duration / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((duration % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((duration % (1000 * 60 * 60)) / (1000 * 60));
+
+    return `${days} days ${hours} hours ${minutes} minutes`;
+}
