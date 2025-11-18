@@ -39,7 +39,8 @@ global.vs = '2.2.0'
 global.nameqr = 'Kira-X'
 global.namebot = '꒰ 🍎 ꒱ؘ 𝙆𝙞𝙧𝙖-𝙓 ❄︎ ࿐ ࿔*:･ﾟ'
 global.Rubysessions = 'KiraSessions'
-global.jadi = 'KiraJadiBots' 
+global.jadi = 'KiraJadiBots'
+global.rutaJadiBot = './KiraJadiBots'
 global.RubyJadibts = true
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
