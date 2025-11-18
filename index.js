@@ -350,11 +350,11 @@ console.log(chalk.bold.cyan(`La carpeta: ${jadi} se creó correctamente.`))
 console.log(chalk.bold.cyan(`La carpeta: ${jadi} ya está creada.`)) 
 }
 
-const readRutaJadiBot = readdirSync(rutaJadiBot)
+const readRutaJadiBot = readdirSync(global.rutaJadiBot)
 if (readRutaJadiBot.length > 0) {
 const creds = 'creds.json'
 for (const gjbts of readRutaJadiBot) {
-const botPath = join(rutaJadiBot, gjbts)
+const botPath = join(global.rutaJadiBot, gjbts)
 const readBotPath = readdirSync(botPath)
 if (readBotPath.includes(creds)) {
 RubyJadiBot({pathRubyJadiBot: botPath, m: null, conn, args: '', usedPrefix: '/', command: 'serbot'})
