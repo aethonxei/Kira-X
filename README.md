@@ -62,7 +62,7 @@ Additional Extensions
 termux-setup-storage
 ```
 ```bash
-apt update && apt upgrade && pkg install -y git nodejs ffmpeg imagemagick yarn
+pkg update && pkg upgrade && pkg install -y git nodejs ffmpeg imagemagick yarn
 ```
 ```bash
 git clone https://github.com/aethonxei/Kira-X && cd Kira-X
