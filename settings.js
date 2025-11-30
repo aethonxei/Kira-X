@@ -49,7 +49,7 @@ global.packname = '⏤̛̣̣̣̣̣̣̣̣̣̣̣͟͟͞͞⏤͟͟͞͞K̶i̶r̶a̶ �
 global.botname = '🍎༆ ࣭𝖪𝗂𝗋𝖺-𝖷༆ ࣪ ❄︎'
 global.wm = '‧˚꒰🍷꒱ ፝͜⁞𝘠𝘢𝘨𝘢𝘮𝘪 𝘓𝘪𝘨𝘩𝘵 ፝͜⁞ 𖤍'
 global.author = 'Made By 𐔌𝖠𝖾𝗍𝗁𝗈𝗇 𝖷𝖾𝗂 ͡꒱ ۫'
-global.dev = '⌬ 𝖬𝖺𝖽𝖾 𝖻𝗒: 𝖺𝖾𝗍𝗁𝗈𝗇𝗑𝖾𝗂 ⚙️💻 '
+global.dev = '⌬ 𝖺𝖾𝗍𝗁𝗈𝗇𝗑𝖾𝗂 ⚙️💻 '
 global.textbot = '⏤͟͞ू⃪ 𝒀𝒂𝒈𝒂𝒎𝒊-𝑳𝒊𝒈𝒉𝒕 𖤐 • 𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 ᵃᵉᵗʰᵒⁿ´ˣᵉⁱ' 
 global.etiqueta = 'ˑ 𓈒 𐔌 Ă̈ĕ̈t̆̈h̆̈ŏ̈n̆̈X̆̈ĕ̈ĭ̈ ͡꒱ ۫'
 
