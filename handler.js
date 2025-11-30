@@ -344,6 +344,10 @@ if (plugin.admin && !isAdmin) {
 fail('admin', m, this)
 continue
 }
+if (plugin.botAdmin && !isBotAdmin) {
+fail('botAdmin', m, this)
+continue
+}
 if (plugin.private && m.isGroup) {
 fail('private', m, this)
 continue
@@ -374,16 +378,21 @@ match, usedPrefix, noPrefix, _args, args, command, text, conn: this, participant
 try {
 await plugin.call(this, m, extra)
 if (!isPrems) m.coin = m.coin || plugin.coin || false
-} catch (e) {
-m.error = e
-console.error(e)
-if (e) {
-let text = format(e)
-for (let key of Object.values(global.APIKeys))
-text = text.replace(new RegExp(key, 'g'), 'Administrator')
-m.reply(text)
-}
-} finally {
+  } catch (e) {
+  m.error = e
+  console.error(e)
+  if (e) {
+  let text = format(e)
+  // Hide any configured API keys if present
+  if (global.APIKeys && typeof global.APIKeys === 'object') {
+  for (let key of Object.values(global.APIKeys || {})) {
+  if (!key) continue
+  text = text.replace(new RegExp(key, 'g'), 'Administrator')
+  }
+  }
+  m.reply(text)
+  }
+  } finally {
 if (typeof plugin.after === 'function') {
 try {
 await plugin.after.call(this, m, extra)
