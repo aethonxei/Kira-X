@@ -44,7 +44,7 @@ let handler = async (m, { conn }) => {
     let bankCoins = user.bank || 0
 
     let perfil = await conn.profilePictureUrl(userId, 'image')
-      .catch(() => 'https://files.catbox.moe/fr0li2.jpeg)
+      .catch(() => 'https://files.catbox.moe/fr0li2.jpeg')
 
     let profileText = `
 ﹙𖤍﹚︩︪ ⌗ ${name} 𝖯𝖱𝖮𝖥𝖨𝖫𝖤
