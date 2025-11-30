@@ -163,11 +163,18 @@ const {state, saveState, saveCreds} = await useMultiFileAuthState(global.Rubyses
 const msgRetryCounterMap = (MessageRetryMap) => { };
 const msgRetryCounterCache = new NodeCache()
 const {version} = await fetchLatestBaileysVersion();
-let phoneNumber = global.botNumber
+// Normalize optional preconfigured bot number from settings
+let phoneNumber = (global.botNumber || '').toString().trim()
+if (phoneNumber) {
+phoneNumber = phoneNumber.replace(/\s+/g, '')
+if (!phoneNumber.startsWith('+')) {
+phoneNumber = `+${phoneNumber.replace(/\D/g, '')}`
+}}
 
+// Connection method flags
 const methodCodeQR = process.argv.includes("qr")
-const methodCode = !!phoneNumber || process.argv.includes("code")
-const MethodMobile = process.argv.includes("mobile")
+const methodCode = process.argv.includes("code") || !!phoneNumber
+const MethodMobile = process.argv.includes("mobile") || methodCode
 const colores = chalk.bgMagenta.white
 const opcionQR = chalk.bold.green
 const opcionTexto = chalk.bold.cyan
@@ -175,6 +182,10 @@ const rl = readline.createInterface({ input: process.stdin, output: process.stdo
 const question = (texto) => new Promise((resolver) => rl.question(texto, resolver))
 
 let opcion
+// Auto-select code method when explicitly requested and no existing session
+if (methodCode && !fs.existsSync(`./${Rubysessions}/creds.json`)) {
+opcion = '2'
+}
 if (methodCodeQR) {
 opcion = '1'
 }
@@ -221,6 +232,12 @@ if (!conn.authState.creds.registered) {
 let addNumber
 if (!!phoneNumber) {
 addNumber = phoneNumber.replace(/[^0-9]/g, '')
+rl.close()
+setTimeout(async () => {
+let codeBot = await conn.requestPairingCode(addNumber)
+codeBot = codeBot?.match(/.{1,4}/g)?.join("-") || codeBot
+console.log(chalk.bold.white(chalk.bgMagenta(`�o� CODE �o�`)), chalk.bold.white(chalk.white(codeBot)))
+}, 3000)
 } else {
 do {
 phoneNumber = await question(chalk.bgBlack(chalk.bold.greenBright(`✦ Enter The bot's WhatsApp number.\n${chalk.bold.yellowBright(`✏  Example: 2126××××××××`)}\n${chalk.bold.magentaBright('---> ')}`)))
