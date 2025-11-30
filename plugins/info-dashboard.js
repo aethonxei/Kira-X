@@ -1,29 +1,57 @@
+import pkg from '@whiskeysockets/baileys'
+const { generateWAMessageFromContent, prepareWAMessageMedia, proto } = pkg
+
 let handler = async (m, { conn, command }) => {
 
+    // Fake message for quoting
+    const fake = {
+        key: {
+            remoteJid: "status@broadcast",
+            fromMe: false,
+            participant: "0@s.whatsapp.net"
+        },
+        message: {
+            extendedTextMessage: {
+                text: "Dashboard"
+            }
+        }
+    }
+
+    // DASHBOARD COMMANDS
     if (command == 'dash' || command == 'dashboard' || command == 'views') {
-        let stats = Object.entries(db.data.stats).map(([key, val]) => {
-            let name = Array.isArray(plugins[key]?.help) ? plugins[key]?.help?.join(' , ') : plugins[key]?.help || key 
+
+        let stats = Object.entries(global.db.data.stats).map(([key, val]) => {
+            let name = Array.isArray(global.plugins[key]?.help)
+                ? global.plugins[key].help.join(' , ')
+                : global.plugins[key]?.help || key
 
             if (/exec/.test(name)) return
             return { name, ...val }
-        })
+        }).filter(Boolean)
 
+        // sort by most used
         stats = stats.sort((a, b) => b.total - a.total)
-        var handlers = stats.slice(0, 10).map(({ name, total }) => {
+
+        // top 10 commands
+        let handlers = stats.slice(0, 10).map(({ name, total }) => {
             return `⬡ *Command* : *${name}*\n⬡ *Uses* : ${total}`
         }).join('\n\n')
 
-        conn.reply(m.chat, handlers, m, fake)
+        return conn.reply(m.chat, handlers, m, fake)
     }
 
-    if (command == 'database' || command == 'users' || command == 'user') {
-        let totalreg = Object.keys(global.db.data.users).length
-        let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length
+    // USER DATABASE COMMANDS
+    if (command == 'database' || command == 'users' || command == 'user' || command == 'usuarios') {
 
-        conn.reply(m.chat, `
-🗂️ *I Have ${rtotalreg} Registered Users*
+        let totalUsers = Object.keys(global.db.data.users).length
+        let registered = Object.values(global.db.data.users).filter(v => v.registered).length
+        let unregistered = totalUsers - registered
 
-📂 *${totalreg} Are not registered*`, m)
+        return conn.reply(m.chat, `
+🗂️ *Registered Users:* ${registered}
+📂 *Unregistered Users:* ${unregistered}
+📁 *Total:* ${totalUsers}
+`, m)
     }
 
 }
