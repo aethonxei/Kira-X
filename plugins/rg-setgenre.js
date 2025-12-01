@@ -9,7 +9,7 @@ if (user.genre) {
 return conn.reply(m.chat, `${emoji2} You already have a set gender; if you want to delete the current gender, use:\n> » ${usedPrefix}delgenre`, m);
 }
 
-if (!text) return conn.reply(m.chat, `${emoji} You must enter a valid gender.\n> Example » *${usedPrefix + command} man*`, m);
+if (!text) return conn.reply(m.chat, `${emoji} You must enter a valid gender.\n> Example » *${usedPrefix + command} male*`, m);
 
 function asignarGenre(text) {
 let genre;
