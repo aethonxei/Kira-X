@@ -28,7 +28,7 @@ return genre;
 
 let genre = asignarGenre(text);
 if (!genre) {
-return conn.reply(m.chat, `${emoji2} Remember to choose a valid genre.\n> Example: ${usedPrefix + command} man`, m);
+return conn.reply(m.chat, `${emoji2} Remember to choose a valid genre.\n> Example: ${usedPrefix + command} male`, m);
 }
 
 user.genre = genre;
