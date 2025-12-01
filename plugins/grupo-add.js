@@ -45,7 +45,7 @@ let handler = async (m, { conn, participants, text, usedPrefix, command }) => {
 
 handler.help = ['invite <number>', 'add <number>'];
 handler.tags = ['group'];
-handler.command = ['add', 'agregar', 'añadir', 'inv', 'invite'];
+handler.command = ['add', 'agregar', 'añadir', 'invi', 'invite'];
 
 handler.group = true;
 handler.admin = true;
