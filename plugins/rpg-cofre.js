@@ -1,6 +1,6 @@
 const handler = async (m, { isPrems, conn }) => {
   if (!global.db.data.users[m.sender]) {
-    throw `${emoji4} Usuario no encontrado.`;
+    throw `${emoji4} User not found.`;
   }
 
   const lastCofreTime = global.db.data.users[m.sender].lastcofre;
