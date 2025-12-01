@@ -54,7 +54,7 @@ let economy_text = `*Economics and Statistics:*
 
 let status_text = `*State:*
   › ⏳ Last Adventure: ${user.lastadventure ? moment(user.lastadventure).fromNow() : 'Never'}
-  › 🍀 With luck: ${user.status.is_lucky && user.status.lucky_until > Date.now() ? '✅' : '❌'}
+  › 🍀 Lucky: ${user.status.is_lucky && user.status.lucky_until > Date.now() ? '✅' : '❌'}
   › 🚔 Imprisoned: ${user.status.is_jailed && user.status.jailed_until > Date.now() ? '✅' : '❌'}`;
 
 let text = `╭━〔 Inventory of ${name} 〕⬣\n` +
