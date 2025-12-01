@@ -28,7 +28,7 @@ let inventory_text = `*Consumables:*
   › 🧪 Health Potion: ${inv.health_potion || 0}
   › 🍀 Potion of Luck: ${inv.luck_potion || 0}
   › 🛡️ Escape Amulet: ${inv.escape_amulet || 0}
-  › 🗝️ Pick: ${inv.lockpick || 0}
+  › 🗝️ Key: ${inv.lockpick || 0}
   › 🎁 Mystery Chest: ${inv.mysterious_chest || 0}`;
 
 let mat = user.materials || {};
