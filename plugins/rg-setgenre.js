@@ -14,11 +14,11 @@ if (!text) return conn.reply(m.chat, `${emoji} You must enter a valid gender.\n>
 function asignarGenre(text) {
 let genre;
 switch (text.toLowerCase()) {
-case "man":
-genre = "Man";
+case "male":
+genre = "Male";
 break;
-case "women":
-genre = "Women";
+case "female":
+genre = "Female";
 break;
 default:
 return null;
@@ -38,5 +38,5 @@ return conn.reply(m.chat, `${emoji} Your gender has been established as: *${user
 
 handler.help = ['setgenre']
 handler.tags = ['rg']
-handler.command = ['setgenero', 'setgenre']
+handler.command = ['setgenero', 'setgenre', 'setgender']
 export default handler;
