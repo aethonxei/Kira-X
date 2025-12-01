@@ -8,7 +8,7 @@ if (!(who in global.db.data.users)) {
 return conn.reply(m.chat, `${emoji} The user is not in my database.`, m);
 }
 
-let img = 'https://qu.ax/fRMNm.jpg';
+let img = 'https://files.catbox.moe/sfq2mb.jpg';
 let user = global.db.data.users[who];
 let name = conn.getName(who);
 let premium = user.premium ? '✅' : '❌';
