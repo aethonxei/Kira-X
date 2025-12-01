@@ -31,7 +31,7 @@ let handler = async (m, { conn, usedPrefix, participants }) => {
     let texto = `
 ╭─〔 ᥫ᭡ 𝗘𝗖𝗢𝗡𝗢𝗠𝗬 𝗜𝗡𝗙𝗢 ❀ 〕
 │ 👤 User » *${nombre}*
-│ 💸 Money » *¥${coin} ${m.moneda}*
+│ 💸 Wallet » *¥${coin} ${m.moneda}*
 │ 🏦 Bank » *¥${bank} ${m.moneda}*
 │ 🧾 Total » *¥${total} ${m.moneda}*
 ╰─────────────────────
